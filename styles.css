@@ -6,18 +6,18 @@
 
 .container {
     display: flex;
-    height: auto;
-}
-
-.column {
-    border: 10x solid black;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    flex-grow: 1;
+    width: 600px;
+    height: 600px;
+    border: 2px solid red;
 }
 
-.row {
-    flex: 1;
+.square {
     border: 1px solid black;
+    flex: 1 0 6.25%;
+    aspect-ratio: 1 / 1;
+}
+
+.hover {
+    background: gray;
 }

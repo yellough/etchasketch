@@ -1,16 +1,20 @@
 // create 16 div inside div.container
 
 let container = document.querySelector(".container");
-for (x=0; x<16; x++) {
-    let column = document.createElement('div');
-    column.className = "column";
-
-    for (i=0; i<16; i++) {
-        let row = document.createElement('div');
-        row.className = "row";
-        row.innerText = (x * 16) + i;
-        column.appendChild(row);
-    }
-
-    container.appendChild(column); 
+function makeGrid (size) {
+for (i=1; i<=size*size; i++) {
+    let square = document.createElement('div');
+    square.className = "square";
+    container.appendChild(square); 
 }
+}
+
+makeGrid(16);
+
+let box = document.querySelectorAll(".square");
+
+box.forEach(function (elem) {
+    elem.addEventListener("mouseover", () => {
+        elem.classList.add("hover");
+    })
+})
