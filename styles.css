@@ -20,3 +20,13 @@
 .hover {
     background: gray;
 }
+
+button {
+    margin: 8px;
+    padding: 2px;
+    font-size: large;
+}
+
+body {
+    text-align: center;
+}
