@@ -27,7 +27,15 @@ makeGrid(size);
 // Get the user size and set up new grid
 function setSize() {
     size = prompt("How many squares per side of the grid?");
-    makeGrid(size);
+    size = parseInt(size)
+
+    if (size<1 || size>100 || !Number.isInteger(size)) {
+        alert("Size must be a number greater than 1 and less than 100.")
+    }
+    else {
+        makeGrid(size);
+    }
+   
 }
 
 let sizeButton = document.querySelector("#sizeButton")
